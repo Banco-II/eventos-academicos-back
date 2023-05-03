@@ -9,18 +9,6 @@ const getLocations = async (req, res) => {
   }
 };
 
-// exports.getLocationName = (req, res, next) => {
-//   const locationName = req.params.locationName;
-//   Location.findByName(locationName)
-//     .then((location) => {
-//       if (!location) {
-//         return res.status(404).json({ message: "Localização não encontrada!" });
-//       }
-//       res.status(200).json({ location: location });
-//     })
-//     .catch((err) => console.log(err));
-// };
-
 const createLocation = async (req, res) => {
   const { name, description,longitude,latitude} = req.body;
   try {
